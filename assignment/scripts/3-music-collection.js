@@ -7,9 +7,11 @@ function addToCollection (title, artist, yearPublished){
     title: title,
     artist: artist,
     yearPublished: yearPublished
-  }
+}
+  collection.push(album); //take one 0/undefined index
   return album;
 }
+
 
 addToCollection();
 
@@ -21,3 +23,13 @@ console.log(addToCollection('Social Cues', 'Cage the Elephant', 2019));
 console.log(addToCollection('Purple Rain', 'Prince', 1984));
 
 console.log(collection);
+
+//
+// function showCollection (array){
+//   console.log(collection.length);
+//   for (i=0; i<collection.length; i++){
+//     console.log(title + 'by' + artist + 'published in' + yearPublished);
+//   }
+// }
+//
+// showCollection();
