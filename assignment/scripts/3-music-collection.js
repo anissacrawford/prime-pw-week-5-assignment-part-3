@@ -8,12 +8,9 @@ function addToCollection (title, artist, yearPublished){
     artist: artist,
     yearPublished: yearPublished
 }
-  collection.push(album); //take one 0/undefined index
+  collection.push(album);
   return album;
 }
-
-
-addToCollection();
 
 console.log(addToCollection('AM', 'Arctic Monkeys', 2013));
 console.log(addToCollection('Blonde', 'Frank Ocean', 2016));
@@ -24,12 +21,28 @@ console.log(addToCollection('Purple Rain', 'Prince', 1984));
 
 console.log(collection);
 
-//
-// function showCollection (array){
-//   console.log(collection.length);
-//   for (i=0; i<collection.length; i++){
-//     console.log(title + 'by' + artist + 'published in' + yearPublished);
+
+function showCollection (array){
+  console.log(array.length);
+  for (let i=0; i<array.length; i++){
+    console.log(album.title, " by ", album.artist, " published in ", album.yearPublished)
+  }
+}
+
+console.log(showCollection(collection));
+
+// for (i=0; i<array.length; i++){
+//   console.log(title + 'by' + artist + 'published in' + yearPublished)
+// }
+
+
+
+// function findByArtist (artist){
+//   let foundArtist = [];
+//   for (collection){
+//     foundArtist.push(artist)
 //   }
 // }
-//
-// showCollection();
+
+// console.log(findByArtist('Arctic Monkeys'));
+// console.log(findByArtist('Beyonce'));
