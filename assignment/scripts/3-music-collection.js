@@ -18,6 +18,7 @@ console.log(addToCollection('Circles', 'Mac Miller', 2020));
 console.log(addToCollection('Man On The Moon', 'Kid Cudi', 2009));
 console.log(addToCollection('Social Cues', 'Cage the Elephant', 2019));
 console.log(addToCollection('Purple Rain', 'Prince', 1984));
+console.log(addToCollection('Doves Cry', 'Prince', 1984)); //added to test double artist
 //calling albums to addToCollection function
 
 console.log(collection);
@@ -31,28 +32,18 @@ function showCollection (array){
   return;
 }
 
-showCollection(collection); //adding collection array to showCollection function and logging
+showCollection(collection);//adding collection array to showCollection function and logging
 
 
-// function findByArtist (artist){
-//   let foundArtist = [];
-//   //console.log(foundArtist);
-//   for (let i=0; i<collection.length; i++){
-//     if (artist === collection) {
-//     foundArtist = collection.push(artist);
-//     }
-//   } return foundArtist;
-// }
-//
-// console.log(findByArtist('Arctic Monkeys'));
-// console.log(findByArtist('Beyonce'));
-
-
-
-
-
-
-function findByArtist (artist) {
-  letFoundArtist = [];
-
+function findByArtist (artist) {               //takes in artist parameter
+  let foundArtist = [];
+  for (let i=0; i<collection.length; i++){     //loops through collection
+    if (collection[i].artist == artist){       //if collection artist is the same as chosen artist
+      foundArtist.push(collection[i].artist);  //add artist to collection array
+    }
+  }  return foundArtist;                       //return artist
 }
+
+console.log(findByArtist('Arctic Monkeys'));  //logs, calls, and gives parameters
+console.log(findByArtist('Beyonce'));
+console.log(findByArtist('Prince'));
